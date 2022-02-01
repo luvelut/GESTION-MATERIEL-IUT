@@ -5,6 +5,25 @@
 
 ## FONCTIONNALITES
 
+* Le back office :
+
+* L'API REST :
+
+L'API a été conçue grâce au module Api Platform. Toutes les actions CRUD des entités sont disponibles.
+
+La documentation est disponible ici : http://127.0.0.1:8000/api
+
+L'authentification de l'API a été réalisée grâce au bundle LexikJWTAuthentication (https://github.com/lexik/LexikJWTAuthenticationBundle) qui fonctionne grâce à un token d'authentification que l'on peut obtenir grâce à la requête suivante :
+```curl -X 'POST' \
+  'http://127.0.0.1:8000/api/login' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "username": "lucilevelut@orange.fr",
+  "password": "test"
+  }'
+```
+
 ## INSTALLATION
 
 Pour installer le projet en local sur votre machine, veuillez suivre les différentes étapes : 
