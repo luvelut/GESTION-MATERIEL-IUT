@@ -21,7 +21,7 @@ La connexion est implémentée grâce au Bundle Security de symfony.
 
 L'API a été conçue grâce au module Api Platform. Toutes les actions CRUD des entités sont disponibles.
 
-La documentation est disponible ici : http://127.0.0.1:8000/api
+La documentation est disponible ici : http://127.0.0.1:8000/api ( après avoir installer localement le projet )
 
 L'authentification de l'API a été réalisée grâce au bundle LexikJWTAuthentication (https://github.com/lexik/LexikJWTAuthenticationBundle) qui fonctionne grâce à un token d'authentification que l'on peut obtenir grâce à la requête suivante :
 ```curl -X 'POST' \
@@ -34,7 +34,7 @@ L'authentification de l'API a été réalisée grâce au bundle LexikJWTAuthenti
   }'
 ```
 
-## INSTALLATION
+## INSTALLATION EN LOCAL
 
 Pour installer le projet en local sur votre machine, veuillez suivre les différentes étapes : 
 
