@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les emprunts{% endblock %}
+
+{% block body %}
+    <div class="index">
+        <h1>Emprunts</h1>
+        <a class="hollow button primary" href="{{ path('loan_new') }}"> Créer </a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Emprunteur</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Date de rendu</th>
+                <th>Objet</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for loan in loans %}
+            <tr>
+                {% if loan.returnedAt %}
+                    <td class="ok">{{ loan.id }}</td>
+                {% else %}
+                    <td class="not-ok">{{ loan.id }}</td>
+                {% endif %}
+                <td>{{ loan.user.firstName }} {{loan.user.lastName }}</td>
+                <td>{{ loan.createdAt ? loan.createdAt|date('Y-m-d') : '' }}</td>
+                <td>{{ loan.finishedAt ? loan.finishedAt|date('Y-m-d') : '' }}</td>
+                <td>{{ loan.returnedAt ? loan.returnedAt|date('Y-m-d') : ' Pas encore rendu ' }}</td>
+                <td>{{ loan.ressource.label }}</td>
+                <td class="actions">
+                    <a href="{{ path('loan_show', {'id': loan.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('loan_edit', {'id': loan.id}) }}"><i class="fas fa-edit"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

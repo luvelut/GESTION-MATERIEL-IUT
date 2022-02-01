@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un groupe{% endblock %}
+
+{% block body %}
+    <h1>Modifier un groupe</h1>
+
+    {{ include('group/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a class="button hollow primary" href="{{ path('group_index') }}">Retour</a>
+
+    {{ include('group/_delete_form.html.twig') }}
+{% endblock %}

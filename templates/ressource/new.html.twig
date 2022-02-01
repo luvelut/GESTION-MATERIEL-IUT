@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer une ressource{% endblock %}
+
+{% block body %}
+    <h1>Créer une ressource</h1>
+
+    {{ include('ressource/_form.html.twig') }}
+
+    <a class="button hollow primary" href="{{ path('ressource_index') }}">Retour</a>
+{% endblock %}

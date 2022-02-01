@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un emprunt{% endblock %}
+
+{% block body %}
+    <h1>Modifier un emprunt</h1>
+
+    {{ include('loan/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a class="button hollow primary" href="{{ path('loan_index') }}">Retour</a>
+
+    {{ include('loan/_delete_form.html.twig') }}
+{% endblock %}

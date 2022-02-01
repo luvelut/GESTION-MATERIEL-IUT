@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les ressources{% endblock %}
+
+{% block body %}
+    <div class="index">
+        <h1>Ressources</h1>
+        <a class="hollow button primary" href="{{ path('ressource_new') }}">Créer</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Label</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Quantité totale</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ressource in ressources %}
+            <tr>
+                <td>{{ ressource.id }}</td>
+                <td>{{ ressource.label }}</td>
+                <td>{{ ressource.image }}</td>
+                <td>{{ ressource.description }}</td>
+                <td>{{ ressource.quantityTotal }}</td>
+                <td class="actions">
+                    <a href="{{ path('ressource_show', {'id': ressource.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('ressource_edit', {'id': ressource.id}) }}"><i class="fas fa-edit"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un emprunt{% endblock %}
+
+{% block body %}
+    <h1>Créer un emprunt</h1>
+
+    {{ include('loan/_form.html.twig') }}
+
+    <a class="button hollow primary" href="{{ path('loan_index') }}">Retour</a>
+{% endblock %}
