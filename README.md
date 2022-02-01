@@ -9,6 +9,8 @@
 
 Dans le back office, il est possible d'effectuer toutes les actions CRUD de chaque entité.
 
+La connexion est implémentée grâce au Bundle Security de symfony.
+
 ![capture d'écran côté front](https://github.com/luvelut/GESTION-MATERIEL-IUT/blob/main/backoffice.JPG) 
 
 * L'API REST :
