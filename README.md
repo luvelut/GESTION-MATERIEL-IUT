@@ -3,6 +3,10 @@
 
 ## CONTEXTE
 
+Le but est de gérer le prêt du matériel de l'IUT directement sur une application Web et/ou mobile.
+
+Les produits disponibles devront être catégorisés par type (photos/vidéos/informatique/...) et par groupe (mmi/chimie/info/enseignant/...).
+
 ## FONCTIONNALITES
 
 * Le back office :
