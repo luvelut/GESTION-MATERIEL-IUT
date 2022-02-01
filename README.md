@@ -7,6 +7,10 @@
 
 * Le back office :
 
+Dans le back office, il est possible d'effectuer toutes les actions CRUD de chaque entité.
+
+![capture d'écran côté front](https://github.com/luvelut/GESTION-MATERIEL-IUT/blob/main/backoffice.JPG) 
+
 * L'API REST :
 
 L'API a été conçue grâce au module Api Platform. Toutes les actions CRUD des entités sont disponibles.
