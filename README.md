@@ -24,7 +24,8 @@ L'API a été conçue grâce au module Api Platform. Toutes les actions CRUD des
 La documentation est disponible ici : http://127.0.0.1:8000/api ( après avoir installer localement le projet )
 
 L'authentification de l'API a été réalisée grâce au bundle LexikJWTAuthentication (https://github.com/lexik/LexikJWTAuthenticationBundle) qui fonctionne grâce à un token d'authentification que l'on peut obtenir grâce à la requête suivante :
-```curl -X 'POST' \
+```
+curl -X 'POST' \
   'http://127.0.0.1:8000/api/login' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
